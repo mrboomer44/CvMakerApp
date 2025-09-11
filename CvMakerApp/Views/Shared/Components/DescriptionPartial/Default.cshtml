@@ -1,0 +1,6 @@
+﻿@using CvMakerApp.Entity.Entities
+@model List<Description>
+<section>
+    <h2>Profesyonel Özet</h2>
+    <p>@foreach(var i in Model){@i.DescriptionText <br />}</p>
+</section>

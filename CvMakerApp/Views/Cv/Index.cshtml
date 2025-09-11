@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yunus Güldaş - Profesyonel CV</title>
+    @await Html.PartialAsync("StylePartial")
+</head>
+<body>
+
+    @await Component.InvokeAsync("HeaderPartial")
+    @await Component.InvokeAsync("DescriptionPartial")
+    @await Component.InvokeAsync("ExperiensPartial")
+    @await Component.InvokeAsync("EducationPartial")
+    @await Component.InvokeAsync("MemberShip")
+    @await Component.InvokeAsync("LanguagePartial")
+    @await Component.InvokeAsync("StackPartial")
+    @await Component.InvokeAsync("VoluntaliesPartial")
+    @await Component.InvokeAsync("TestimonialPartial")
+
+
+
+</body>
+</html>
