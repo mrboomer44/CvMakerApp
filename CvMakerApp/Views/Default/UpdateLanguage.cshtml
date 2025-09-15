@@ -1,0 +1,21 @@
+﻿@using CvMakerApp.Entity.Entities
+@model Language
+@{
+    ViewData["Title"] = "UpdateLanguage";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<h3>Dil Güncelle</h3>
+<br />
+<form method="post">
+    <input type="hidden" class="form-control" asp-for="LanguageId" value="@Model.LanguageId" />
+    <label>Dil Adı: </label>
+    <input type="text" class="form-control" asp-for="LanguageName" value="@Model.LanguageName" /><br />
+    <label>Dil Seviyesi: </label>
+    <input type="text" class="form-control" asp-for="LanguageLevel" value="@Model.LanguageLevel" /><br />
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+
+
+
+

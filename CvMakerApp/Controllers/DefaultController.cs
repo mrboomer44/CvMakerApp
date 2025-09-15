@@ -182,6 +182,244 @@ namespace CvMakerApp.Controllers
             }
             return RedirectToAction("Education", "Default");
         }
+        [HttpGet]
+        public IActionResult Memberships()
+        {
+            var deger = context.Memberships.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddMembership()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddMembership(Entity.Entities.Membership membership)
+        {
+            context.Add(membership);
+            context.SaveChanges();
+            return RedirectToAction("Memberships");
+        }
+        public IActionResult DeleteMembership(int id)
+        {
+            var deger = context.Memberships.Find(id);
+            if (deger != null)
+            {
+                context.Memberships.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Memberships");
+        }
+        [HttpGet]
+        public IActionResult UpdateMembership(int id)
+        {
+            var deger = context.Memberships.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateMembership(Entity.Entities.Membership membership)
+        {
+            var deger = context.Memberships.Find(membership.MembershipId);
+            if (deger != null)
+            {
+                deger.Organisation = membership.Organisation;
+                deger.Position = membership.Position;
+                deger.StartDate = membership.StartDate;
+                deger.EndDate = membership.EndDate;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Memberships");
+        }
+
+        [HttpGet]
+        public IActionResult Language()
+        {
+            var deger = context.Languages.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddLanguage()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddLanguage(Entity.Entities.Language language)
+        {
+            context.Add(language);
+            context.SaveChanges();
+            return RedirectToAction("Language");
+        }
+        public IActionResult DeleteLanguage(int id)
+        {
+            var deger = context.Languages.Find(id);
+            if (deger != null)
+            {
+                context.Languages.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Language");
+        }
+        [HttpGet]
+        public IActionResult UpdateLanguage(int id)
+        {
+            var deger = context.Languages.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateLanguage(Entity.Entities.Language language)
+        {
+            var deger = context.Languages.Find(language.LanguageId);
+            if (deger != null)
+            {
+                deger.LanguageName = language.LanguageName;
+                deger.LanguageLevel = language.LanguageLevel;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Language");
+        }
+        [HttpGet]
+        public IActionResult Stack()
+        {
+            var deger = context.Stacks.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddStack()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddStack(Entity.Entities.Stack stack)
+        {
+            context.Add(stack);
+            context.SaveChanges();
+            return RedirectToAction("Stack");
+        }
+        public IActionResult DeleteStack(int id)
+        {
+            var deger = context.Stacks.Find(id);
+            if (deger != null)
+            {
+                context.Stacks.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Stack");
+        }
+        [HttpGet]
+        public IActionResult UpdateStack(int id)
+        {
+            var deger = context.Stacks.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateStack(Entity.Entities.Stack stack)
+        {
+            var deger = context.Stacks.Find(stack.StackId);
+            if (deger != null)
+            {
+                deger.Description = stack.Description;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Stack");
+        }
+        [HttpGet]
+        public IActionResult Voluntary()
+        {
+            var deger = context.Voluntaries.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddVoluntary()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddVoluntary(Entity.Entities.Voluntary voluntary)
+        {
+            context.Add(voluntary);
+            context.SaveChanges();
+            return RedirectToAction("Voluntary");
+        }
+        public IActionResult DeleteVoluntary(int id)
+        {
+            var deger = context.Voluntaries.Find(id);
+            if (deger != null)
+            {
+                context.Voluntaries.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Voluntary");
+        }
+        [HttpGet]
+        public IActionResult UpdateVoluntary(int id)
+        {
+            var deger = context.Voluntaries.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateVoluntary(Entity.Entities.Voluntary voluntary  )
+        {
+            var deger = context.Voluntaries.Find(voluntary.VoluntaryId);
+            if (deger != null)
+            {
+                deger.CompanyName = voluntary.CompanyName;
+                deger.Position = voluntary.Position;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Voluntary");
+        }
+        [HttpGet]
+        public IActionResult Testimonial()
+        {
+            var deger = context.Testimonials.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddTestimonial()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddTestimonial(Entity.Entities.Testimonial testimonial)
+        {
+            context.Add(testimonial);
+            context.SaveChanges();
+            return RedirectToAction("Testimonial");
+        }
+        public IActionResult DeleteTestimonial(int id)
+        {
+            var deger = context.Testimonials.Find(id);
+            if (deger != null)
+            {
+                context.Testimonials.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Testimonial");
+        }
+        [HttpGet]
+        public IActionResult UpdateTestimonial(int id)
+        {
+            var deger = context.Testimonials.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateTestimonial(Entity.Entities.Testimonial testimonial)
+        {
+            var deger = context.Testimonials.Find(testimonial.TestimonialId);
+            if (deger != null)
+            {
+                deger.TestimonialName = testimonial.TestimonialName;
+                deger.position = testimonial.position;
+                deger.Company = testimonial.Company;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Testimonial");
+        }
     }
 }
 
