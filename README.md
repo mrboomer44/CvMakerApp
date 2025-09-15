@@ -172,12 +172,12 @@ Bir hata bulduysanız veya öneriniz varsa, lütfen [Issues](https://github.com/
 
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
 
-## 👨‍💻 Geliştirici
+# 👨‍💻 Geliştirici
 
-**[Geliştirici Adı]**
-- GitHub: [Yunus Güldaş](https://github.com/kullaniciadi)
-- LinkedIn: [linkedin.com/in/profil](https://linkedin.com/in/profil)
-- E-posta: email@example.com
+**[Yunus Güldaş]**
+- GitHub: [mrboomer44](https://github.com/mrboomer44)
+- LinkedIn: [linkedin.com/in/yunusguldas](https://linkedin.com/in/yunusguldas)
+- E-posta: yns.guldas44@gmail.com
 
 ## 🙏 Teşekkürler
 
