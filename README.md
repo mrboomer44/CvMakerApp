@@ -175,7 +175,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 ## 👨‍💻 Geliştirici
 
 **[Geliştirici Adı]**
-- GitHub: [@kullaniciadi](https://github.com/kullaniciadi)
+- GitHub: [Yunus Güldaş](https://github.com/kullaniciadi)
 - LinkedIn: [linkedin.com/in/profil](https://linkedin.com/in/profil)
 - E-posta: email@example.com
 
