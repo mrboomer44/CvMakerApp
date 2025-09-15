@@ -82,6 +82,56 @@ namespace CvMakerApp.Controllers
             }
             return RedirectToAction("Description", "Default");
         }
+        [HttpGet]
+        public IActionResult Experience()
+        {
+            var deger = context.Experiences.ToList();
+            return View(deger);
+        }
+        [HttpGet]
+        public IActionResult AddExperience()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddExperience(Entity.Entities.Experience experience)
+        {
+            context.Add(experience);
+            context.SaveChanges();
+            return RedirectToAction("Experience");
+        }
+        public IActionResult DeleteExperience(int id)
+        {
+            var deger = context.Experiences.Find(id);
+            if (deger != null)
+            {
+                context.Experiences.Remove(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Experience");
+        }
+        [HttpGet]
+        public IActionResult UpdateExperience(int id)
+        {
+            var deger = context.Experiences.Find(id);
+            return View(deger);
+        }
+        [HttpPost]
+        public IActionResult UpdateExperience(Entity.Entities.Experience experience)
+        {
+            var deger = context.Experiences.Find(experience.ExperienceId);
+            if (deger != null)
+            {
+                deger.Company = experience.Company;
+                deger.Position = experience.Position;
+                deger.StartDate = experience.StartDate;
+                deger.EndDate = experience.EndDate;
+                deger.Description = experience.Description;
+                context.Update(deger);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Experience", "Default");
+        }
     }
 }
 
